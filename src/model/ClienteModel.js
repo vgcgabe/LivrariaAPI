@@ -6,7 +6,7 @@ export class ClienteModel {
         this._cpf    =  this.validaCpf(cpf);
     };
 
-    static validaEmail(email) {
+    validaEmail(email) {
         const regex = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$");
 
         if (regex.test(email)) {
@@ -16,10 +16,10 @@ export class ClienteModel {
         };
     };
 
-    static validaNumero(numero) {
-        for (i of numero) {
-            if (i == '-' || i == '(' || i == ')') {
-                numero = numero.replace(i, '');
+     validaNumero(numero) {
+        for (let i=0; i<numero.length; i++) {
+            if (numero[i] == '-' || numero[i] == '(' || numero[i] == ')' || numero[i] == ' ') {
+                numero = numero.replace(numero[i], '');
             };
         };
 
@@ -34,10 +34,10 @@ export class ClienteModel {
         };
     };
 
-    static validaCpf(cpf) {
-        for (i of cpf) {
-            if (i == '.' || i == '-') {
-                cpf = cpf.replace(i, '');
+     validaCpf(cpf) {
+        for (let i=0;  i<cpf.length; i++) {
+            if (cpf[i] == '.' || cpf[i] == '-' || cpf[i] == ' ') {
+                cpf = cpf.replace(cpf[i], '');
             };
         };
         
@@ -71,4 +71,4 @@ export class ClienteModel {
         return this._cpf;
     };
 
-}
+};
