@@ -23,9 +23,18 @@ export const livrosController = (app, bd)=>{
         data();
     });
 
-    app.get("/livros/id", (req, res)=>{
-        
-    });
+    app.get('/livros/:id', (req, res)=>{
+        const data = async()=>{
+            try{
+                const livros = await LivroDAO.listarLivrosID(req.params.id);
+                res.status(200).json(livros)
+            }catch(error){
+                res.status(404).json(error)
+            }
+        }
+        data();
+      
+    })
 
     // ROTA PARA CADASTRAR LiVROS
     app.post('/livros', (req, res)=>{
@@ -45,13 +54,56 @@ export const livrosController = (app, bd)=>{
         }
         data();
       
+    });
+
+    app.put('/livros/:id', (req, res)=>{
+        const body = req.body;
+        const id = req.params.id;
+            const data = async()=>{
+                try{
+                    const LivroDadosAntigo= await LivroDAO.listarLivrosID(id);
+
+                    console.log("LivroDadosAntigo");
+                    console.log(LivroDadosAntigo);
+
+
+                    const LivroAtualizado = new 
+                        Livros(
+                                body.id || LivroDadosAntigo[0].id,
+                                body.titulo || LivroDadosAntigo[0].titulo, 
+                                body.autor || LivroDadosAntigo[0].autor, 
+                                body.editora || LivroDadosAntigo[0].editora,
+                                body.preço || LivroDadosAntigo[0].preco)
+
+                    console.log("LivroAtualizado");
+                    console.log(LivroAtualizado);
+
+                    const parametro = 
+                    [LivroAtualizado.titulo, 
+                        LivroAtualizado.autor, 
+                        LivroAtualizado.editora, 
+                        LivroAtualizado.preço,
+                        id]
+                        console.log(parametro)
+                    const livros = await LivroDAO.AlterarLivro(parametro);
+                    res.status(201).json(livros)
+                }catch(error){
+                    res.status(404).json(error)
+                }
+            }
+            data();   
+        
+    });
+
+    app.delete('/livros/:id', (req, res)=>{
+        const data = async()=>{
+            try{
+                const livros = await LivroDAO.DeletarLivro(req.params.id);
+                res.status(201).json(livros)
+            }catch(error){
+                res.status(404).json(error)
+            }
+        }
+        data();
     })
-
-    app.put("/livros", (req, res)=>{
-        
-    });
-
-    app.delete("/livros", (req, res)=>{
-        
-    });
 }

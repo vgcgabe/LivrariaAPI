@@ -36,7 +36,7 @@
         return new Promise((resolve, reject) => {
             this.bd.run(`
             UPDATE LIVROS 
-            SET titulo = ?, autor = ? , editora = ?, preço = ?  WHERE id = ?`, LivroAtualizado,
+            SET titulo = ?, autor = ? , editora = ?, preco = ?  WHERE id = ?`, LivroAtualizado,
              (error)=>{
                 if(error) reject(error);
                 else resolve('DEU CERTO ALTERAR LIVRO')
