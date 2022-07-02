@@ -98,7 +98,8 @@ export const livrosController = (app, bd)=>{
     app.delete('/livros/:id', (req, res)=>{
         const data = async()=>{
             try{
-                const livros = await LivroDAO.DeletarLivro(req.params.id);
+                const livros = await LivroDAO.DeletarLivro(req.params.id); 
+                
                 res.status(201).json(livros)
             }catch(error){
                 res.status(404).json(error)
