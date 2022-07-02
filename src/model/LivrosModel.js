@@ -1,4 +1,4 @@
-class Livros{
+ export class Livros{
     constructor(id, titulo, autor, editora, preço){
         this.id = id
         this.titulo = titulo
@@ -7,5 +7,3 @@ class Livros{
         this.preço = preço
     }
 }
-
-export default Livros

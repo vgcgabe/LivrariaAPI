@@ -1,10 +1,16 @@
-import  Express  from "express";
-import { clienteController } from "./controller/clienteController.js";
+import  express  from "express";
+//import { clienteController } from "./controller/clienteController.js";
+import { livrosController } from "./controller/livrosController.js";
+import { bd } from "./infra/configDB.js";
 
-const app = Express();
+
+const app = express ();
+app.use(express.json())
+
 const port = 3000;
 
-clienteController(app);
+
+livrosController(app, bd);
 
 app.listen(port, () => {
     console.log(`Listen to port ${port}`);
