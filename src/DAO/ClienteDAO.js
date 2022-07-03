@@ -10,36 +10,34 @@ export class ClienteDAO {
                     reject(`Erro ao selecionar a tabela: ${error.message}`);
                 } else {
                     resolve({
-                        "TABLE": result
+                        "CLIENTES": result
                     });
                 };
             });
         });
     };
 
-    getClientesById(cpf) {
+    getClientesById(id) {
         return new Promise((resolve, reject) => {
-            this.bd.all(`SELECT NOME FROM CLIENTES WHERE CPF='${cpf}'`, (error, result) => {
+            this.bd.all(`SELECT NOME FROM CLIENTES WHERE ID='${id}'`, (error, result) => {
                 if (error) {
                     reject(`Erro ao procurar o usuário: ${error.message}`)
                 } else {
                     resolve({
-                        "USUARIO": result
+                        "CLIENTE SELECIONADO": result
                     });
                 };
             });
         });
     };
 
-    deleteCliente(cpf) {
+    deleteCliente(id) {
         return new Promise((resolve, reject) => {
-            this.bd.all(`DELETE FROM CLIENTES WHERE CPF='${cpf}'`, (error, result) => {
+            this.bd.all(`DELETE FROM CLIENTES WHERE ID='${id}'`, (error) => {
                 if (error) {
                     reject(`Erro ao deletar o usuário: ${error.message}`)
                 } else {
-                    resolve({
-                        "USUARIO DELETADO": result
-                    });
+                    resolve('USUÁRIO DELETADO');
                 };
             });
         });
@@ -48,21 +46,34 @@ export class ClienteDAO {
     postCliente(cliente) {
         return new Promise((resolve, reject) => {
             this.bd.run(`
-            UPDATE Clientes SET
-            nome=?, sobrenome=?, cpf=?, email=?, numero=?
-            WHERE id=?`, [
+            INSERT INTO CLIENTES (id, nome, cpf, email, numero) VALUES(?, ?, ?, ?, ?)`, [
+                cliente.id,
                 cliente.nome,
                 cliente.cpf,
                 cliente.email,
                 cliente.numero,
-                id
-            ], (error, result) => {
+
+            ], (error) => {
                 if (error) {
                     reject(`Erro ao inserir o usuário: ${error}`)
                 } else {
-                    resolve({
-                        "USUARIO ADICIONADO": result
-                    });
+                    resolve('CLIENTE ADICIONADO');
+                };
+            });
+        });
+    };
+
+    putCliente(cliente) {
+        return new Promise((resolve, reject) => {
+            this.bd.run(`
+                UPDATE CLIENTES
+                SET nome = ?, cpf = ?, email = ?, numero = ?
+                WHERE ID = ?
+            `, cliente, (error) => {
+                if (error) {
+                    reject(`Erro ao atualizar o banco: ${error.message}`)
+                } else {
+                    resolve('CLIENTE ALTERADO');
                 };
             });
         });

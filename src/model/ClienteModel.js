@@ -1,5 +1,6 @@
 export class ClienteModel {
-    constructor(nome, email, numero, cpf) {
+    constructor(id, nome, email, numero, cpf) {
+        this._id = id;
         this._nome   =  nome;
         this._email  =  this.validaEmail(email);
         this._numero =  this.validaNumero(numero);
@@ -54,6 +55,10 @@ export class ClienteModel {
             };
         };
     };
+
+    get id() {
+        return this._id
+    }
 
     get nome() {
         return this._nome;
