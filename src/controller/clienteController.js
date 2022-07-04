@@ -3,11 +3,13 @@ import { ClienteDAO } from "../DAO/ClienteDAO.js";
 
 export const clienteController = (app, bd) => {
     const clienteDAO = new ClienteDAO(bd);
+
     app.get('/cliente', (request, response) => {
         const data = async () => {
             try {
-                const clientes = await clienteDAO.getClientes()
-                response.status(200).json(clientes)
+                const clientes = await clienteDAO.getClientes();
+                response.status(200).json(clientes);
+
             } catch (error) {
                 response.status(404).json(error);
             };
@@ -87,6 +89,8 @@ export const clienteController = (app, bd) => {
                 ];
 
                 const cliente = await clienteDAO.putCliente(arrayClienteNovo);
+
+                response.status(201).json(cliente);
 
             } catch (error) {
                 response.status(404).json(error)

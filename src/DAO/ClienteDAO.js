@@ -33,7 +33,7 @@ export class ClienteDAO {
 
     deleteCliente(id) {
         return new Promise((resolve, reject) => {
-            this.bd.all(`DELETE FROM CLIENTES WHERE ID='${id}'`, (error) => {
+            this.bd.run(`DELETE FROM CLIENTES WHERE ID=${id}`, (error) => {
                 if (error) {
                     reject(`Erro ao deletar o usuário: ${error.message}`)
                 } else {
