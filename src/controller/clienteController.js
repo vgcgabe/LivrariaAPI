@@ -1,4 +1,4 @@
-import { ClienteModel } from "../model/ClienteModel";
+import { ClienteModel } from "../model/ClienteModel.js";
 import { ClienteDAO } from "../DAO/ClienteDAO.js";
 
 export const clienteController = (app, bd) => {
@@ -78,6 +78,7 @@ export const clienteController = (app, bd) => {
                     body.cpf || clienteDadosAntigos[0].cpf
 
                 );
+                
                 const arrayClienteNovo = [
                     clienteAtualizado.nome,
                     clienteAtualizado.email,
@@ -85,7 +86,8 @@ export const clienteController = (app, bd) => {
                     clienteAtualizado.cpf
                 ];
 
-                const cliente = await clienteDAO.putCliente(arrayClienteNovo)
+                const cliente = await clienteDAO.putCliente(arrayClienteNovo);
+
             } catch (error) {
                 response.status(404).json(error)
             };
