@@ -1,4 +1,8 @@
 //Funcionários - Victor Gabriel Camargo Guedes
+
+import { Funcionario } from "../model/FuncionarioModel.js";
+//import { ClienteDAO } from "../DAO/ClienteDAO.js";
+
 export const funcionarios = (app) => {
     //ROTA PARA CONSULTAR FUNCIONARIOS SEM PARAMETRO
     app.get('/funcionarios', (req, res)=>{
