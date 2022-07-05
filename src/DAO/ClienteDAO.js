@@ -19,13 +19,12 @@ export class ClienteDAO {
 
     getClientesById(id) {
         return new Promise((resolve, reject) => {
-            this.bd.all(`SELECT NOME FROM CLIENTES WHERE ID='${id}'`, (error, result) => {
+            this.bd.all(`SELECT * FROM CLIENTES WHERE ID='${id}'`, (error, result) => {
                 if (error) {
                     reject(`Erro ao procurar o usuário: ${error.message}`)
                 } else {
-                    resolve({
-                        "CLIENTE SELECIONADO": result
-                    });
+                    resolve(
+                        result);
                 };
             });
         });

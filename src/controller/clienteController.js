@@ -53,11 +53,12 @@ export const clienteController = (app, bd) => {
     app.delete('/cliente/:id', (request, response) => {
         const data = async () => {
             try {
-                const cliente = await clienteDAO().delete(request.params.id);
+                const cliente = await clienteDAO.deleteCliente(request.params.id);
 
-                response(201).json(cliente)
+                response.status(201).json(cliente);
+
             } catch(error) {
-                response.status(404).json(error)
+                response.status(404).json(error.message);
             };
         };
 
@@ -69,23 +70,30 @@ export const clienteController = (app, bd) => {
         const id = request.params.id;
 
         const data = async () => {
+
             try {
                 const clienteDadosAntigos = await clienteDAO.getClientesById(id);
+                
+                const clienteAtualizado = new ClienteModel (
 
-                const clienteAtualizado = new ClienteModel(
-                    body.id || clienteDadosAntigos[0].id,
-                    body.nome || clienteDadosAntigos[0].nome,
-                    body.email || clienteDadosAntigos[0].email,
+                    body.id     || clienteDadosAntigos[0].id,
+                    body.nome   || clienteDadosAntigos[0].nome,
+                    body.email  || clienteDadosAntigos[0].email,
                     body.numero || clienteDadosAntigos[0].numero,
-                    body.cpf || clienteDadosAntigos[0].cpf
+                    body.cpf    || clienteDadosAntigos[0].cpf
 
                 );
+
+                console.log(clienteAtualizado);
                 
                 const arrayClienteNovo = [
+                    
                     clienteAtualizado.nome,
+                    clienteAtualizado.cpf,
                     clienteAtualizado.email,
                     clienteAtualizado.numero,
-                    clienteAtualizado.cpf
+                    id
+
                 ];
 
                 const cliente = await clienteDAO.putCliente(arrayClienteNovo);
@@ -93,7 +101,7 @@ export const clienteController = (app, bd) => {
                 response.status(201).json(cliente);
 
             } catch (error) {
-                response.status(404).json(error)
+                response.status(404).json(error.message)
             };
         }; 
 
