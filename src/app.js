@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 
 import { clienteController } from "./controller/clienteController.js";
 //import { departamentoController } from "./controller/departamentoController.js";
-//import { fornecedorController } from "./controller/fornecedorController.js"
+import { fornecedorController } from "./controller/fornecedorController.js"
 //import { funcionariosController } from "./controller/funcionariosController.js";
 //import { livrosController } from "./controller/livrosController.js";
 
@@ -18,7 +18,7 @@ app.use(cors());
 
 clienteController(app, bd);
 //departamentoController(app, bd);
-//fornecedorController(app, bd);
+fornecedorController(app, bd);
 //funcionariosController(app, bd);
 //livrosController(app, bd);
 

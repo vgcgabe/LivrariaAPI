@@ -1,6 +1,6 @@
 export class ClienteModel {
     constructor(id, nome, email, numero, cpf) {
-        this._id = id;
+        this._id     =  id;
         this._nome   =  nome;
         this._email  =  this.validaEmail(email);
         this._numero =  this.validaNumero(numero);
@@ -8,7 +8,7 @@ export class ClienteModel {
     };
 
     validaEmail(email) {
-        const regex = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$");
+        const regex = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]com+$");
 
         if (regex.test(email)) {
             return email;
