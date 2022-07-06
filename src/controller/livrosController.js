@@ -36,7 +36,6 @@ export const livrosController = (app, bd)=>{
       
     })
 
-    // ROTA PARA CADASTRAR LiVROS
     app.post('/livros', (req, res)=>{
         const body = req.body;
         const NovoLivro = new Livros(body.id, body.titulo, body.autor, body.editora, body.preço)
