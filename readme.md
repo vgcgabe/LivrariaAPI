@@ -4,21 +4,22 @@
 <h1 align="center"> Livraria API</h1>
 <img src="https://i.pinimg.com/564x/6f/a3/a3/6fa3a32eaadbf42728bf6c6aa3c5c9f3.jpg">
 <h3 :hammer:>Funcionalidade:</h3>
-<h5>O projeto final do módulo 4 tem como finalidade realizar uma API para Livraria.
+<h4>O projeto final do módulo 4 tem como finalidade realizar uma API para Livraria.</h4>
 <h5>- Verbos HTTP padrão REST</h5>
 <h5>- Padrão MVC</h5>
 <h5>- CRUD </h5>
- <h3> 📌 As rotas desenvolvidas foram:</h3>
- - GET
- - PUT
- - POST
- - DEL </h3>
- <h3 :hammer:>Rotas do Projeto de cada entidade:</h3>
-<h5>"/Cliente"
-"/Departamento"
-"/Fornecedor"
-"/Funcionários"
-"/Livros"</h5>
+<h3> 📌 As rotas desenvolvidas foram:</h3>
+<h5>- GET </h5>
+<h5>- PUT </h5>
+<h5>- POST </h5>
+<h5>- DEL </h5>
+
+ <h3 :hammer:>Entidades trabalhadas no projeto:</h3>
+<h5>"/Cliente"</h5>
+<h5>"/Departamento"</h5>
+<h5>"/Fornecedor"</h5>
+<h5>"/Funcionários"</h5>
+<h5>"/Livros"</></h5>
 
 ### GET 
 Retorna todos os agendamentos realizados;
@@ -37,17 +38,17 @@ Para deletar dados já cadastrados;
 
 <h3 :hammer:>Tecnologias utilizadas:</h3>
 <h5>
-- NodeJS
-- SQLite
-- Insominia
-- Heroku
-- Metodologia ágil Kanban e scrum </h5>
+<h5>- NodeJS</h5>
+<h5>- SQLite</h5>
+<h5>- Insominia</h5>
+<h5>- Heroku </h5>
+<h5>- Metodologia ágil Kanban e scrum </h5>
 
 
 <h3 :hammer:>Autores:</h3>
-<h5><sub> 👩‍💻 Eduarda Tybusch </sub>(https://github.com/devdudd) ,
-<sub>👩‍💻 João Vitor</sub>(https://github.com/JoaoV1821),
-<sub>👩‍💻 Magali Lima</sub>(https://github.com/MagaliLimaDev),
-<sub>👩‍💻 Victor Gabriel</sub>(https://github.com/vgcgabe) e
-<sub>👩‍💻 Priscila Karina</sub>(https://github.com/priKSouza) </h5>
+[<h5><sub> 👩‍💻 Eduarda Tybusch </sub>](https://github.com/devdudd),</h5>
+[<h5><sub>👩‍💻 João Vitor</sub>(https://github.com/JoaoV1821)</h5>,
+[<h5><sub>👩‍💻 Magali Lima</sub>(https://github.com/MagaliLimaDev)<h/5>,
+[<h5><sub>👩‍💻 Victor Gabriel</sub>(https://github.com/vgcgabe) e </h5>
+[<h5><sub>👩‍💻 Priscila Karina</sub>(https://github.com/priKSouza) </h5>
 
