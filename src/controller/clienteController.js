@@ -1,4 +1,4 @@
-import { ClienteModel } from "../model/ClienteModel";
+import { ClienteModel } from "../model/ClienteModel.js";
 import { ClienteDAO } from "../DAO/ClienteDAO.js";
 
 export const clienteController = (app) => {
