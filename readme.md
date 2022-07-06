@@ -5,14 +5,14 @@
 <img src="https://i.pinimg.com/564x/6f/a3/a3/6fa3a32eaadbf42728bf6c6aa3c5c9f3.jpg">
 <h3 :hammer:>Funcionalidade:</h3>
 <h5>O projeto final do módulo 4 tem como finalidade realizar uma API para Livraria.
-- Verbos HTTP padrão REST
-- Padrão MVC
-- CRUD
-  📌 As rotas desenvolvidas foram:
+<h5>- Verbos HTTP padrão REST</h5>
+<h5>- Padrão MVC</h5>
+<h5>- CRUD </h5>
+ <h3> 📌 As rotas desenvolvidas foram:</h3>
  - GET
  - PUT
  - POST
- - DEL </h5>
+ - DEL </h3>
  <h3 :hammer:>Rotas do Projeto de cada entidade:</h3>
 <h5>"/Cliente"
 "/Departamento"
