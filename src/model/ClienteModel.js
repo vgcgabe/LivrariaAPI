@@ -1,9 +1,10 @@
 export class ClienteModel {
-    constructor(nome, email, numero, cpf) {
+    constructor(id, nome, email, numero, cpf) {
+        this._id = id;
         this._nome   =  nome;
         this._email  =  this.validaEmail(email);
         this._numero =  this.validaNumero(numero);
-        this._cpf    =  this.validaCpf(cpf);
+        this._cpf    =  this.validaCpf(cpf)
     };
 
     validaEmail(email) {
@@ -23,14 +24,19 @@ export class ClienteModel {
             };
         };
 
-        if (numero.length != 11) {
-            throw new Error('Número inválido!');
+        if (numero.length > 11 || numero.length < 11) {
+            console.log(numero.length);
+            console.log(numero)
+            throw new Error('Número pequeno');
+            
         } else {
             const regex = new RegExp("[1-9]{2}9[0-9]{4}[0-9]{4}");
 
             if (regex.test(numero)) {
                 return numero
-            };
+            } else {
+                throw new Error('Número inválido!')
+            }
         };
     };
 
@@ -54,6 +60,10 @@ export class ClienteModel {
             };
         };
     };
+
+    get id() {
+        return this._id
+    }
 
     get nome() {
         return this._nome;
