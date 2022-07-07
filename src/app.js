@@ -8,7 +8,7 @@ import bodyParser from "body-parser";
 import { funcionarios } from "./controller/funcionariosController.js";
 //import { livrosController } from "./controller/livrosController.js";
 
-//import { bd } from "./infra/configDB.js";
+import { bd } from "./infra/configDB.js";
 
 const app = Express();
 const port = 3000;
@@ -16,10 +16,12 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(Express.json());
+
 // clienteController(app, bd);
 // departamentoController(app, bd);
 // fornecedorController(app, bd);
-funcionarios(app);
+funcionarios(app, bd);
 // livrosController(app, bd);
 
 // app.listen(port, () => {
