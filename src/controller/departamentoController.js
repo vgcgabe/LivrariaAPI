@@ -53,11 +53,12 @@ export const departamentoController = (app, bd) => {
     app.delete('/departamento/:id', (request, response) => {
         const data = async () => {
             try {
-                const departamento = await departamentoDAO().delete(request.params.id);
+                const departamento = await departamentoDAO.deleteDepartamento(request.params.id);
 
-                response(201).json(departamento)
+                response.status(201).json(departamento);
+
             } catch(error) {
-                response.status(404).json(error)
+                response.status(404).json(error.message);
             };
         };
 
@@ -69,21 +70,27 @@ export const departamentoController = (app, bd) => {
         const id = request.params.id;
 
         const data = async () => {
+
             try {
                 const departamentoDadosAntigos = await departamentoDAO.getDepartamentosById(id);
+                
+                const departamentoAtualizado = new DepartamentoModel (
 
-                const departamentoAtualizado = new DepartamentoModel(
                     body.id || departamentoDadosAntigos[0].id,
                     body.categoria || departamentoDadosAntigos[0].categoria,
                     body.responsavel || departamentoDadosAntigos[0].responsavel,
                     body.qtdFuncionarios || departamentoDadosAntigos[0].qtdFuncionarios,
-
                 );
+
+                console.log(departamentoAtualizado);
                 
                 const arrayDepartamentoNovo = [
+                    
                     departamentoAtualizado.categoria,
                     departamentoAtualizado.responsavel,
-                    departamentoAtualizado.qtdFuncionarios
+                    departamentoAtualizado.qtdFuncionarios,
+                    id
+
                 ];
 
                 const departamento = await departamentoDAO.putDepartamento(arrayDepartamentoNovo);
@@ -91,7 +98,7 @@ export const departamentoController = (app, bd) => {
                 response.status(201).json(departamento);
 
             } catch (error) {
-                response.status(404).json(error)
+                response.status(404).json(error.message)
             };
         }; 
 
