@@ -5,13 +5,11 @@ import bodyParser from "body-parser";
 import { clienteController } from "./controller/clienteController.js";
 import { departamentoController } from "./controller/departamentoController.js";
 import { fornecedorController } from "./controller/fornecedorController.js"
-import { funcionariosController } from "./controller/funcionariosController.js";
 import { livrosController } from "./controller/livrosController.js";
 import { funcionariosController } from "./controller/funcionariosController.js";
-import { livrosController } from "./controller/livrosController.js";
-
 import { bd } from "./infra/configDB.js";
 
+const app = Express();
 const port = 3000;
 
 app.use(bodyParser.json());
