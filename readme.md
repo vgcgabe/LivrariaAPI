@@ -46,9 +46,10 @@ Para deletar dados já cadastrados;
 
 
 <h3 :hammer:>Autores:</h3>
-👩‍💻[<img src="https://avatars.githubusercontent.com/u/92827706?v=4" width=115><br><sub>  Eduarda Tybusch</sub>](https://github.com/devdudd |
-👩‍💻[<img src="https://avatars.githubusercontent.com/u/70721670?v=4" width=115><br><sub>  João Vitor</sub>](https://github.com/JoaoV1821) |
-👩‍💻[<img src="" width=115><br><sub>  Magali Lima</sub>](https://github.com/MagaliLimaDev) |
-👩‍💻 [<img src="https://avatars.githubusercontent.com/u/100290493?v=4" width=115><br><sub>  Victor Gabriel</sub>](https://github.com/vgcgabe) |
-👩‍💻[<img src="https://avatars.githubusercontent.com/u/86885725?v=4" width=115><br><sub>  Priscila Karina</sub>](https://github.com/priKSouza)
+<a href="default.asp"><sub>Eduarda Tybusch</sub> <img src="https://avatars.githubusercontent.com/u/92827706?v=4" width=115 alt="https://github.com/devdudd"></a>
+👩‍💻<br><sub>  </sub>(https://github.com/devdudd) |
+👩‍💻<img src="https://avatars.githubusercontent.com/u/70721670?v=4" width=115><br><sub>  João Vitor</sub>(https://github.com/JoaoV1821) |
+👩‍💻<img src="" width=115><br><sub>  Magali Lima</sub>](https://github.com/MagaliLimaDev) |
+👩‍💻 <img src="https://avatars.githubusercontent.com/u/100290493?v=4" width=115><br><sub>  Victor Gabriel</sub>(https://github.com/vgcgabe) |
+👩‍💻<img src="https://avatars.githubusercontent.com/u/86885725?v=4" width=115><br><sub>  Priscila Karina</sub>(https://github.com/priKSouza)
 
