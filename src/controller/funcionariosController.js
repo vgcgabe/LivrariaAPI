@@ -3,7 +3,7 @@
 import { Funcionario } from "../model/FuncionarioModel.js";
 //import { ClienteDAO } from "../DAO/ClienteDAO.js";
 
-export const funcionarios = (app, bd) => {
+export const funcionariosController = (app, bd) => {
     //ROTA PARA CONSULTAR FUNCIONARIOS SEM PARAMETRO
     app.get('/funcionarios', (req, res)=>{
         //res.send("ROTA GET FUNCIONARIOS");
