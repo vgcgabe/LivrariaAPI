@@ -2,7 +2,7 @@
     :construction: Desenvolvimento  API Rest em NodeJS :construction:
 </h4>
 <h1 align="center"> Livraria API</h1>
-<img src="https://i.pinimg.com/564x/6f/a3/a3/6fa3a32eaadbf42728bf6c6aa3c5c9f3.jpg">
+<img align="center" src="https://i.pinimg.com/564x/6f/a3/a3/6fa3a32eaadbf42728bf6c6aa3c5c9f3.jpg">
 <h3 :hammer:>Funcionalidade:</h3>
 <h4>O projeto final do módulo 4 tem como finalidade realizar uma API para Livraria.</h4>
 <h5>- Verbos HTTP padrão REST</h5>
@@ -46,10 +46,18 @@ Para deletar dados já cadastrados;
 
 
 <h3 :hammer:>Autores:</h3>
-<a href="default.asp"><sub>Eduarda Tybusch</sub> <img src="https://avatars.githubusercontent.com/u/92827706?v=4" width=115 alt="https://github.com/devdudd"></a>
-👩‍💻<br><sub>  </sub>(https://github.com/devdudd) |
-👩‍💻<img src="https://avatars.githubusercontent.com/u/70721670?v=4" width=115><br><sub>  João Vitor</sub>(https://github.com/JoaoV1821) |
-👩‍💻<img src="" width=115><br><sub>  Magali Lima</sub>](https://github.com/MagaliLimaDev) |
-👩‍💻 <img src="https://avatars.githubusercontent.com/u/100290493?v=4" width=115><br><sub>  Victor Gabriel</sub>(https://github.com/vgcgabe) |
-👩‍💻<img src="https://avatars.githubusercontent.com/u/86885725?v=4" width=115><br><sub>  Priscila Karina</sub>(https://github.com/priKSouza)
+👩‍💻<img src="https://avatars.githubusercontent.com/u/92827706?v=4" width=115><a href="https://github.com/devdudd"><sub>Eduarda Tybusch</sub> </a><br>
+
+
+👩‍💻<img src="https://avatars.githubusercontent.com/u/70721670?v=4" width=115><a href="https://github.com/JoaoV1821"><sub>João Vitor</sub> </a> <br>
+
+
+👩‍💻<img src="./img/magali.jpeg" width=115><a href="https://github.com/MagaliLimaDev"><sub>Magali Lima</sub> </a> <br>
+
+
+👩‍💻<img src="https://avatars.githubusercontent.com/u/100290493?v=4" width=115><a href="https://github.com/vgcgabe"><sub>Victor Gabriel</sub> </a><br>
+
+
+
+👩‍💻<img src="https://avatars.githubusercontent.com/u/86885725?v=4" width=115><a href="https://github.com/priKSouza"><sub>  Priscila Karina</sub>
 
