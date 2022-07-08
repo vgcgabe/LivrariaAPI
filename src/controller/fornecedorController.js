@@ -26,7 +26,7 @@ export const fornecedorController = (app, bd) => {
                 response.status(200).json(fornecedor);
 
             } catch (error) {
-                response.status(404).json(error);
+                response.status(404).json(error.message);
             };
         };
 
@@ -43,7 +43,10 @@ export const fornecedorController = (app, bd) => {
                 const fornecedores = await fornecedorDAO.postFornecedor(fornecedor);
                 response.status(201).json(fornecedores);
                 
+
+                
             } catch (error) {
+                console.log(error.message)
                 response.status(404).json(error.message);
             };
         };

@@ -9,16 +9,25 @@ export class FornecedorModel {
 
      validaCnpj(cnpj) {
         for (let i=0;  i<cnpj.length; i++) {
+
             if (cnpj[i] == '.' || cnpj[i] == '-' || cnpj[i] == ' ') {
                 cnpj = cnpj.replace(cnpj[i], '');
             };
         };
         
         if (cnpj.length != 14) {
-            console.log(cnpj.length);
+            throw new Error('CNPJ inválido!');
+
         } else {
-            return cnpj
-        }
+            const regex = new RegExp('(^\[0-9]{2}\[0-9]{3}\[0-9]{3}\[0-9]{4}\[0-9]{2}$)');
+
+            if (regex.test(cnpj)) {
+                return cnpj;
+
+            } else {
+                throw new Error('CNPJ inválido!');
+            };
+        };
     };
 
     get id() {
@@ -36,6 +45,4 @@ export class FornecedorModel {
     get cnpj() {
         return this._cnpj;
     };
-
 };
-

@@ -53,7 +53,8 @@ export class FornecedorDAO {
 
             ], (error) => {
                 if (error) {
-                    reject(`Erro ao inserir o fornecedor: ${error}`)
+                    reject(`Erro ao inserir o fornecedor: ${error.message}`);
+
                 } else {
                     resolve('FORNECEDOR ADICIONADO');
                 };
