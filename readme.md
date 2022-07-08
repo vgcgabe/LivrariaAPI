@@ -46,18 +46,19 @@ Para deletar dados já cadastrados;
 
 
 <h3 :hammer:>Autores:</h3>
-👩‍💻<img src="https://avatars.githubusercontent.com/u/92827706?v=4" width=115><a href="https://github.com/devdudd"><sub>Eduarda Tybusch</sub> </a><br>
+
+<img src="https://avatars.githubusercontent.com/u/92827706?v=4" width=115><a href="https://github.com/devdudd"><sub> 👩‍💻Eduarda Tybusch</sub> </a> ||
 
 
-👩‍💻<img src="https://avatars.githubusercontent.com/u/70721670?v=4" width=115><a href="https://github.com/JoaoV1821"><sub>João Vitor</sub> </a> <br>
+<img src="https://avatars.githubusercontent.com/u/70721670?v=4" width=115><a href="https://github.com/JoaoV1821"><sub> 👩‍💻João Vitor</sub> </a> ||
 
 
-👩‍💻<img src="./img/magali.jpeg" width=115><a href="https://github.com/MagaliLimaDev"><sub>Magali Lima</sub> </a> <br>
+<img src="./img/magali.jpeg" width=115><a href="https://github.com/MagaliLimaDev"><sub> 👩‍💻 Magali Lima</sub> </a> ||
 
 
-👩‍💻<img src="https://avatars.githubusercontent.com/u/100290493?v=4" width=115><a href="https://github.com/vgcgabe"><sub>Victor Gabriel</sub> </a><br>
+<img src="https://avatars.githubusercontent.com/u/100290493?v=4" width=115><a href="https://github.com/vgcgabe"><sub> 👩‍💻 Victor Gabriel</sub> </a> ||
 
 
 
-👩‍💻<img src="https://avatars.githubusercontent.com/u/86885725?v=4" width=115><a href="https://github.com/priKSouza"><sub>  Priscila Karina</sub>
+<img src="https://avatars.githubusercontent.com/u/86885725?v=4" width=115><a href="https://github.com/priKSouza"><sub> 👩‍💻 Priscila Karina</sub>
 
