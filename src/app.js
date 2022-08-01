@@ -28,6 +28,7 @@ livrosController(app, bd);
 
 app.listen(port, () => {
     console.log(`Listen to port ${port}`);
+    console.log('http://localhost:3000/cliente');
 });
 
 

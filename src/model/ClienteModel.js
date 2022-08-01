@@ -8,11 +8,12 @@ export class ClienteModel {
     };
 
     validaEmail(email) {
-        const regex = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]com+$");
+        const regex = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]com$");
 
         if (regex.test(email)) {
             return email;
         } else {
+            console.log(email)
             throw new Error('Email inválido!');
         };
     };
@@ -25,8 +26,7 @@ export class ClienteModel {
         };
 
         if (numero.length > 11 || numero.length < 11) {
-            console.log(numero.length);
-            console.log(numero)
+            
             throw new Error('Número pequeno');
             
         } else {
