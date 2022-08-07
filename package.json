@@ -30,7 +30,6 @@
     "npm": "^8.13.2",
     "sqlite3": "^5.0.8"
   },
-  
    "devDependencies": {
     "nodemon": "^2.0.18"
   }
