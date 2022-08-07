@@ -23,9 +23,9 @@
         console.log(Livro);
         return new Promise((resolve, reject) => {
             this.bd.run(
-                `INSERT INTO LIVROS (id,titulo, autor, editora, preco)
-                 VALUES (?, ?, ?, ?,?) `,
-                 [Livro.id, Livro.titulo, Livro.autor, Livro.editora, Livro.preço],
+                `INSERT INTO LIVROS (id,titulo, autor, editora, preco, categoria, img)
+                 VALUES (?, ?, ?, ?,?, ?, ?) `,
+                 [Livro.id, Livro.titulo, Livro.autor, Livro.editora, Livro.preço, Livro.categoria, Livro.img],
             (error)=>{
                 if(error) reject(error);
                 else resolve('DEU CERTO INSERIR LIVRO')
@@ -36,7 +36,7 @@
         return new Promise((resolve, reject) => {
             this.bd.run(`
             UPDATE LIVROS 
-            SET titulo = ?, autor = ? , editora = ?, preco = ?  WHERE id = ?`, LivroAtualizado,
+            SET titulo = ?, autor = ? , editora = ?, preco = ?, categoria = ?, img = ?  WHERE id = ?`, LivroAtualizado,
              (error)=>{
                 if(error) reject(error);
                 else resolve('DEU CERTO ALTERAR LIVRO')
