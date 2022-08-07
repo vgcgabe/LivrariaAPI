@@ -2,6 +2,7 @@ import { ClienteModel } from "../model/ClienteModel.js";
 import { ClienteDAO } from "../DAO/ClienteDAO.js";
 
 export const clienteController = (app, bd) => {
+
     const clienteDAO = new ClienteDAO(bd);
 
     app.get('/cliente', (request, response) => {
@@ -18,6 +19,7 @@ export const clienteController = (app, bd) => {
         data();
     });
 
+
     app.get('/cliente/:id', (request, response) => {
         const data = async () => {
             try {
@@ -33,15 +35,19 @@ export const clienteController = (app, bd) => {
         data();
     });
 
+    
     app.post('/cliente', (request, response) => {
+
         const body = request.body;
-
+        
         const cliente = new ClienteModel(body.id, body.nome, body.email, body.numero, body.cpf);
-
+        
         const data = async () => {
+
             try {
                 const clientes = await clienteDAO.postCliente(cliente);
                 response.status(201).json(clientes);
+
             } catch (error) {
                 response.status(404).json(error);
             };
@@ -76,11 +82,11 @@ export const clienteController = (app, bd) => {
                 
                 const clienteAtualizado = new ClienteModel (
 
-                    body.id     || clienteDadosAntigos[0].id,
-                    body.nome   || clienteDadosAntigos[0].nome,
-                    body.email  || clienteDadosAntigos[0].email,
-                    body.numero || clienteDadosAntigos[0].numero,
-                    body.cpf    || clienteDadosAntigos[0].cpf
+                    body.id     || clienteDadosAntigos[0].ID,
+                    body.nome   || clienteDadosAntigos[0].NOME,
+                    body.email  || clienteDadosAntigos[0].EMAIL,
+                    body.numero || clienteDadosAntigos[0].NUMERO,
+                    body.cpf    || clienteDadosAntigos[0].CPF
 
                 );
 
