@@ -10,7 +10,9 @@ import { funcionariosController } from "./controller/funcionariosController.js";
 import { bd } from "./infra/configDB.js";
 
 const app = Express();
+
 const port =  process.env.PORT || 3000;
+
 
 app.use(bodyParser.json());
 app.use(cors());
