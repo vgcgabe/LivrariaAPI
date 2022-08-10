@@ -38,7 +38,7 @@ export const livrosController = (app, bd)=>{
 
     app.post('/livros', (req, res)=>{
         const body = req.body;
-        const NovoLivro = new Livros(body.id, body.titulo, body.autor, body.editora, body.preço)
+        const NovoLivro = new Livros(body.id, body.titulo, body.autor, body.editora, body.preco, body.categoria, body.img)
         
         const data = async()=>{
             try{
@@ -47,7 +47,7 @@ export const livrosController = (app, bd)=>{
                 console.log(livros);
                 res.status(201).json(livros)
             }catch(error){
-                console.log("erro");
+                console.log(error);
                 res.status(404).json(error)
             }
         }
@@ -72,7 +72,10 @@ export const livrosController = (app, bd)=>{
                                 body.titulo || LivroDadosAntigo[0].titulo, 
                                 body.autor || LivroDadosAntigo[0].autor, 
                                 body.editora || LivroDadosAntigo[0].editora,
-                                body.preço || LivroDadosAntigo[0].preco)
+                                body.preco || LivroDadosAntigo[0].preco,
+                                body.categoria || LivroDadosAntigo[0].categoria,
+                                body.img || LivroDadosAntigo[0].img
+                                )
 
                     console.log("LivroAtualizado");
                     console.log(LivroAtualizado);
@@ -81,7 +84,9 @@ export const livrosController = (app, bd)=>{
                     [LivroAtualizado.titulo, 
                         LivroAtualizado.autor, 
                         LivroAtualizado.editora, 
-                        LivroAtualizado.preço,
+                        LivroAtualizado.preco,
+                        LivroAtualizado.categoria,
+                        LivroAtualizado.img,
                         id]
                         console.log(parametro)
                     const livros = await LivroDAO.AlterarLivro(parametro);

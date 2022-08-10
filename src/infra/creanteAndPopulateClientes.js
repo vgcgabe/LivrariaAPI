@@ -17,8 +17,8 @@ VALUES
     (1, 'Eugênio Oliveira', 'eugenio.oliveira@bol.com.br', '45918212000', '11439590071'),
     (2, 'Olívia Ribeiro', 'olivia.ribeiro@gmail.com', '09010191001', '11424173964'),
     (3, 'Mirtes Faria Lima', 'mirtes_fl@yahoo.com', '38314637009', '11723889761')
-`
-
+    `
+    
 const criaTabelaClientes = () => {
     db.run(CLIENTES_SCHEMA, (error)=> {
        if (error) console.log(error);
