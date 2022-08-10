@@ -69,7 +69,7 @@ function criaTabelaLivros(){
 function populaTabelaLivros(){
     db.run(INSERT ,(error) => {
      if(error) console.log('erro ao inserir tabela', error)
-})
+  })
 }
 
 const criaTabelaClientes = () => {

@@ -25,7 +25,7 @@
             this.bd.run(
                 `INSERT INTO LIVROS (id,titulo, autor, editora, preco, categoria, img)
                  VALUES (?, ?, ?, ?,?, ?, ?) `,
-                 [Livro.id, Livro.titulo, Livro.autor, Livro.editora, Livro.preço, Livro.categoria, Livro.img],
+                 [Livro.id, Livro.titulo, Livro.autor, Livro.editora, Livro.preco, Livro.categoria, Livro.img],
             (error)=>{
                 if(error) reject(error);
                 else resolve('DEU CERTO INSERIR LIVRO')

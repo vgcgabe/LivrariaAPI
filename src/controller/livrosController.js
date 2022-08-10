@@ -72,7 +72,7 @@ export const livrosController = (app, bd)=>{
                                 body.titulo || LivroDadosAntigo[0].titulo, 
                                 body.autor || LivroDadosAntigo[0].autor, 
                                 body.editora || LivroDadosAntigo[0].editora,
-                                body.preço || LivroDadosAntigo[0].preco,
+                                body.preco || LivroDadosAntigo[0].preco,
                                 body.categoria || LivroDadosAntigo[0].categoria,
                                 body.img || LivroDadosAntigo[0].img
                                 )
@@ -84,7 +84,7 @@ export const livrosController = (app, bd)=>{
                     [LivroAtualizado.titulo, 
                         LivroAtualizado.autor, 
                         LivroAtualizado.editora, 
-                        LivroAtualizado.preço,
+                        LivroAtualizado.preco,
                         LivroAtualizado.categoria,
                         LivroAtualizado.img,
                         id]
